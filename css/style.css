@@ -5,34 +5,40 @@
 }
 
 :root {
-  --ff-primary: "Source Sans Pro", sans-serif;
-  --ff-secondary: "Source Code Pro", monospace;
+  --ff-secondary: 'Alegreya', sans-serif;
+  --ff-primary: 'Titillium Web', monospace;
 
-  --fw-reg: 300;
-  --fw-bold: 900;
+  --fw-reg: 400;
+  --fw-bold: 800;
 
-  --fs-h1: 2rem;
-  --fs-h2: 2rem;
-  --fs-h3: 1.25rem;
+  --fs-h1: 2.5rem;
+  --fs-h2: 1.75rem;
+  --fs-h3: 1.15rem;
   --fs-body: 1rem;
 
   --color-light: #fff;
   --color-dark: #303030;
-  /*--color-accent: #0892d0;*/
-  --color-accent:#007FFF;
+  /*--color-accent: #0892d0,#25C600;*/
+  --color-accent:#3C3CFE;
+  --color-bg:#D0B870;
   
 
   --box-shadow: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
           0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
-@media (min-width: 600px) {
-  :root {
-    --fs-h1: 2.5rem;
-    --fs-h2: 1.75rem;
-    --fs-h3: 1.15rem;
-    --fs-body: 1rem;
+html{
+  scroll-behavior: smooth;
+}
+
+@media(min-width:800px){
+  :root{
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
   }
+
 }
 
 body {
@@ -42,6 +48,8 @@ body {
   font-size: var(--fs-body);
   line-height: 1.5rem;
 }
+
+
 
 img {
   display: block;
@@ -68,7 +76,7 @@ h3 {
 }
 
 section{
-    padding: 4em 2em;
+    padding: 2em 2em 1em 2em;
 }
 
 .section__title--desc{
@@ -77,7 +85,7 @@ section{
 
 .section__title--intro{
     font-weight: var(--fw-reg);
-    padding: 0 .5em;
+    padding: 0 0.5em;
 }
 
 .section__subtitle--intro{
@@ -89,18 +97,18 @@ strong{
     font-weight: var(--fw-bold);
 }
 
+.section__title--aboutme{
+  font-size: var(--fs-h2);
+}
 
 
 .section__subtitle--intro,.section__subtitle--aboutme{
     background: var(--color-accent);
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     color: var(--color-light);
 }
 
-.section__social--intro{
-    text-decoration: none;
-    font-size: var(--fs-h2);
-}
+
 
 .section__social--list{
     list-style: none;
@@ -125,8 +133,17 @@ strong{
 }
 
 .intro__img{
-    border-radius: 5%;
+    border-radius: 10%;
     box-shadow: var(--box-shadow);
+}
+
+.section__title--intro strong{
+  display: block;
+}
+
+.about-me{
+  padding:1em 2em 0em 0em;
+  text-align: justify;
 }
 
 @media(min-width:600px){
@@ -143,6 +160,10 @@ strong{
         grid-template-columns: min-content max-content;
     }
 
+    main{
+      display: block;
+    }
+
     .intro__img{
         min-width: 250px;
         grid-area: img;
@@ -155,7 +176,20 @@ strong{
         padding: 0 0.2em;
     }
 
-    .section__title--intro strong{
+    @media(min-width:800px){
+      
+      .intro{
+        display: grid;
+      }
+      main{
         display: block;
+      }
     }
+
+    @media(min-width:1080px){
+      main{
+        display: flex;
+      }
+    }
+    
 }
