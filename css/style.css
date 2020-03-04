@@ -18,7 +18,7 @@
   --fs-social:2rem;
 
   --color-light: #fff;
-  --color-dark: #303030;
+  --color-dark: #fff;
   --color-accent: #D6133A;
   --color-social:#fff;
   --color-bg: #A1CCDD;
@@ -83,7 +83,6 @@ section {
 
 .section__title--intro {
   font-weight: var(--fw-reg);
-  
   color:var(--color-light);
 }
 
@@ -105,6 +104,7 @@ strong {
   font-size: var(--fs-h2);
   font-family: var(--ff-primary);
   color: var(--color-accent);
+  
 }
 
 .section__subtitle--aboutme{
@@ -113,7 +113,7 @@ strong {
 
 .header{
   margin: 0 0;
-  padding: 2em 3em 0em 2em;
+  padding: 2em 2em 0em 2em;
 }
 
 .section__social--list {
@@ -132,6 +132,10 @@ strong {
   font-size: var(--fs-social);
 }
 
+.section__social--link:hover{
+  color: var(--color-accent);
+}
+
 .intro {
   position: relative;
 }
@@ -147,6 +151,29 @@ strong {
 
 .about-me {
   text-align: justify;
+}
+
+.section__subtitle--skills,.section__title--timeline{
+  color: var(--color-accent);
+}
+
+.skills__body{
+  display: grid;
+}
+
+.section__skills--key{
+  grid-column: 1;
+  padding:1em 2em 0em 0em;
+}
+
+.section__skills--value{
+  grid-column: 2;
+  justify-content: left;
+  padding:1em 2em 0em 0em;
+}
+
+.section__skills--item{
+  list-style: none;
 }
 
 @media (min-width: 600px) {
