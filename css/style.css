@@ -7,6 +7,8 @@
 :root {
   --ff-secondary: "Alegreya", sans-serif;
   --ff-primary: "Titillium Web", monospace;
+  --ff-logo:"Dancing Script", cursive;;
+  --ff-primary:"Exo 2", sans-serif;
 
   --fw-reg: 400;
   --fw-bold: 800;
@@ -15,13 +17,12 @@
   --fs-h2: 1.75rem;
   --fs-h3: 1.15rem;
   --fs-body: 1rem;
-  --fs-social:2rem;
+  --fs-social:1.25rem;
 
   --color-light: #fff;
-  --color-dark: #fff;
   --color-accent: #D6133A;
   --color-social:#fff;
-  --color-bg: #A1CCDD;
+  --color-bg:#02284E;
 
   --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -37,13 +38,13 @@ html {
     --fs-h2: 2.25rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
-    --fs-social:2.5rem;
+    --fs-social:1.75rem;
   }
 }
 
 body {
   background: var(--color-bg);
-  color: var(--color-dark);
+  color: var(--color-light);
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   line-height: 1.5rem;
@@ -86,6 +87,7 @@ section {
   color:var(--color-light);
 }
 
+
 .section__subtitle--intro {
   padding-top: 0.5em;
   
@@ -119,12 +121,25 @@ strong {
 .section__social--list {
   list-style: none;
   display: flex;
-  justify-content:space-between;
-  margin: 0 0;
-  padding: 0;
+  justify-content:center;
+}
+
+.section__logo{
+  font-family: var(--ff-logo);
+  text-decoration: none;
+  color: var(--color-light);
+  height: 90px;
+  width: 40px;
 }
 
 
+.section__logo--link:hover{
+  color: var(--color-accent);
+}
+
+.section__social--item {
+  padding: 2em 2em 1em 0em;
+}
 
 .section__social--link {
   text-decoration: none;
@@ -176,6 +191,11 @@ strong {
   list-style: none;
 }
 
+.section__title--footer{
+  text-align: center;
+  color: var(--color-light);
+}
+
 @media (min-width: 600px) {
   .intro {
     
@@ -196,14 +216,5 @@ strong {
   .section__title--desc {
     padding: 0em;
   }
-
-  .section__social--list {
-    justify-content: flex-end;
-  }
-
-  .section__social--item {
-    padding: 0em 0em 0em 3em;
-  }
-
 
 }
