@@ -18,12 +18,13 @@
   --fs-h3: 1.15rem;
   --fs-body: 1rem;
   --fs-social: 1.25rem;
-  --fs-small:1rem;
+  --fs-small: 0.85rem;
 
   --color-light: #fff;
   --color-accent: #d6133a;
   --color-social: #fff;
-  --color-bg: #02284e;
+  /*--color-bg: #02284e;*/
+  --color-bg: #030321;
 
   --shape--height: 4rem;
   --shape--width: 4rem;
@@ -43,7 +44,7 @@ html {
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
     --fs-social: 1.75rem;
-    --fs-small:1.125rem;
+    --fs-small: 0.9rem;
   }
 }
 
@@ -92,12 +93,12 @@ section {
   color: var(--color-light);
 }
 
-.section__subtitle--intro {
-  padding-top: 0.5em;
-}
-
 strong {
   font-weight: var(--fw-bold);
+}
+
+small {
+  font-size: var(--fs-small);
 }
 
 .section__title--aboutme {
@@ -108,6 +109,7 @@ strong {
   font-size: var(--fs-h2);
   font-family: var(--ff-primary);
   color: var(--color-accent);
+  padding-top: 0.5em;
 }
 
 .section__subtitle--aboutme {
@@ -229,12 +231,10 @@ strong {
   border-radius: 20%;
 }
 
-.section__timeline--designation{
-  font-size: var(--fs-small);
+.section__timeline--designation {
   padding-left: 1em;
-  flex:1;
+  flex: 1;
 }
-
 
 @media (min-width: 600px) {
   .intro {
@@ -260,5 +260,3 @@ strong {
     height: 40px;
   }
 }
-
-
