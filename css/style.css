@@ -131,8 +131,8 @@ strong {
 
 .section__timeline--item {
   display: grid;
-  grid-template-columns: 40px 240px;
-  grid-auto-rows: 1fr;
+  grid-template-columns: 40px max-content;
+  padding-right: 2em;
 }
 
 .section__logo {
@@ -233,6 +233,7 @@ strong {
 
 .section__timeline--designation{
   font-size: var(--fs-small);
+  padding-right: 2em;
 }
 
 
