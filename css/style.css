@@ -7,8 +7,8 @@
 :root {
   --ff-secondary: "Alegreya", sans-serif;
   --ff-primary: "Titillium Web", monospace;
-  --ff-logo:"Dancing Script", cursive;;
-  --ff-primary:"Exo 2", sans-serif;
+  --ff-logo: "Dancing Script", cursive;
+  --ff-primary: "Exo 2", sans-serif;
 
   --fw-reg: 400;
   --fw-bold: 800;
@@ -17,12 +17,16 @@
   --fs-h2: 1.75rem;
   --fs-h3: 1.15rem;
   --fs-body: 1rem;
-  --fs-social:1.25rem;
+  --fs-social: 1.25rem;
+  --fs-small:0.95rem;
 
   --color-light: #fff;
-  --color-accent: #D6133A;
-  --color-social:#fff;
-  --color-bg:#02284E;
+  --color-accent: #d6133a;
+  --color-social: #fff;
+  --color-bg: #02284e;
+
+  --shape--height: 4rem;
+  --shape--width: 4rem;
 
   --box-shadow: 0.25em 0.25em 0.75em rgba(0, 0, 0, 0.25),
     0.125em 0.125em 0.25em rgba(0, 0, 0, 0.15);
@@ -38,7 +42,8 @@ html {
     --fs-h2: 2.25rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
-    --fs-social:1.75rem;
+    --fs-social: 1.75rem;
+    --fs-small:1.125rem;
   }
 }
 
@@ -84,13 +89,11 @@ section {
 
 .section__title--intro {
   font-weight: var(--fw-reg);
-  color:var(--color-light);
+  color: var(--color-light);
 }
-
 
 .section__subtitle--intro {
   padding-top: 0.5em;
-  
 }
 
 strong {
@@ -101,19 +104,17 @@ strong {
   font-size: var(--fs-h2);
 }
 
-.section__subtitle--intro
- {
+.section__subtitle--intro {
   font-size: var(--fs-h2);
   font-family: var(--ff-primary);
   color: var(--color-accent);
-  
 }
 
-.section__subtitle--aboutme{
+.section__subtitle--aboutme {
   color: var(--color-accent);
 }
 
-.header{
+.header {
   margin: 0 0;
   padding: 2em 2em 0em 2em;
 }
@@ -121,10 +122,19 @@ strong {
 .section__social--list {
   list-style: none;
   display: flex;
-  justify-content:center;
+  justify-content: center;
 }
 
-.section__logo{
+.section__timeline--list {
+  list-style: none;
+}
+
+.section__timeline--item {
+  display: grid;
+  grid-template-columns: 40px max-content;
+}
+
+.section__logo {
   font-family: var(--ff-logo);
   text-decoration: none;
   color: var(--color-light);
@@ -132,8 +142,7 @@ strong {
   width: 40px;
 }
 
-
-.section__logo--link:hover{
+.section__logo--link:hover {
   color: var(--color-accent);
 }
 
@@ -147,7 +156,7 @@ strong {
   font-size: var(--fs-social);
 }
 
-.section__social--link:hover{
+.section__social--link:hover {
   color: var(--color-accent);
 }
 
@@ -168,37 +177,65 @@ strong {
   text-align: justify;
 }
 
-.section__subtitle--skills,.section__title--timeline{
+.section__subtitle--skills,
+.section__timeline--title {
   color: var(--color-accent);
 }
 
-.skills__body{
+.skills__body {
   display: grid;
+  padding-bottom: 2em;
 }
 
-.section__skills--key{
+.section__skills--key {
   grid-column: 1;
-  padding:1em 2em 0em 0em;
+  padding: 1em 2em 0em 0em;
 }
 
-.section__skills--value{
+.section__skills--value {
   grid-column: 2;
   justify-content: left;
-  padding:1em 2em 0em 0em;
+  padding: 1em 2em 0em 0em;
 }
 
-.section__skills--item{
-  list-style: none;
-}
-
-.section__title--footer{
+.section__title--footer {
   text-align: center;
   color: var(--color-light);
 }
 
+.section__timeline--shape-primary {
+  background-color: var(--color-accent);
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 20%;
+}
+.section__timeline--shape-secondary {
+  background-color: var(--color-bg);
+  top: 25%;
+  left: 25%;
+  width: 80%;
+  height: 80%;
+  position: absolute;
+  border-radius: 20%;
+}
+.section__timeline--shape-tertiary {
+  background-color: var(--color-light);
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  border-radius: 20%;
+}
+
+.section__timeline--designation{
+  font-size: var(--fs-small);
+}
+
+
 @media (min-width: 600px) {
   .intro {
-    
     column-gap: 0.5em;
     width: fit-content;
     margin: 0 0;
@@ -212,9 +249,19 @@ strong {
     display: block;
   }
 
-
   .section__title--desc {
     padding: 0em;
   }
 
+  .section__timeline--shape-primary {
+    width: 40px;
+    height: 40px;
+  }
+
+  .section__timeline--item {
+    display: grid;
+    grid-template-columns: 60px max-content;
+  }
 }
+
+
