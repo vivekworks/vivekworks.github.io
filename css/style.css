@@ -130,9 +130,7 @@ strong {
 }
 
 .section__timeline--item {
-  display: grid;
-  grid-template-columns: 40px max-content;
-  padding-right: 2em;
+  display: flex;
 }
 
 .section__logo {
@@ -233,7 +231,8 @@ strong {
 
 .section__timeline--designation{
   font-size: var(--fs-small);
-  padding-right: 2em;
+  padding-left: 1em;
+  flex:1;
 }
 
 
@@ -259,11 +258,6 @@ strong {
   .section__timeline--shape-primary {
     width: 40px;
     height: 40px;
-  }
-
-  .section__timeline--item {
-    display: grid;
-    grid-template-columns: 60px max-content;
   }
 }
 
