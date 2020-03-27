@@ -18,7 +18,7 @@
   --fs-h3: 1.15rem;
   --fs-body: 1rem;
   --fs-social: 1.25rem;
-  --fs-small:0.95rem;
+  --fs-small:1rem;
 
   --color-light: #fff;
   --color-accent: #d6133a;
@@ -131,7 +131,8 @@ strong {
 
 .section__timeline--item {
   display: grid;
-  grid-template-columns: 40px max-content;
+  grid-template-columns: 40px 240px;
+  grid-auto-rows: 1fr;
 }
 
 .section__logo {
@@ -205,10 +206,11 @@ strong {
 
 .section__timeline--shape-primary {
   background-color: var(--color-accent);
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   position: relative;
   border-radius: 20%;
+  box-shadow: var(--box-shadow);
 }
 .section__timeline--shape-secondary {
   background-color: var(--color-bg);
