@@ -190,13 +190,13 @@ small {
 
 .section__skills--key {
   grid-column: 1;
-  padding: 1em 2em 0em 0em;
+  padding: 1em 1em 0em 0em;
 }
 
 .section__skills--value {
   grid-column: 2;
   justify-content: left;
-  padding: 1em 2em 0em 0em;
+  padding: 1em 0em 0em 0em;
 }
 
 .section__title--footer {
@@ -237,16 +237,6 @@ small {
 }
 
 @media (min-width: 600px) {
-  .intro {
-    column-gap: 0.5em;
-    width: fit-content;
-    margin: 0 0;
-    grid-template-areas:
-      "img title"
-      "img subtitle";
-    grid-template-columns: min-content max-content;
-  }
-
   main {
     display: block;
   }
@@ -258,5 +248,10 @@ small {
   .section__timeline--shape-primary {
     width: 40px;
     height: 40px;
+  }
+
+
+  .skills__body {
+    grid-template-columns: 150px max-content;
   }
 }
