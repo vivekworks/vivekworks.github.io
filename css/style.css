@@ -190,7 +190,7 @@ small {
 
 .section__skills--key {
   grid-column: 1;
-  padding: 1em 1em 0em 0em;
+  padding: 1em 1.5em 0em 0em;
 }
 
 .section__skills--value {
